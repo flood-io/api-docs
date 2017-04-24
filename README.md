@@ -16,4 +16,9 @@ Where possible, Flood API strives to use appropriate HTTP verbs for each action.
 
 | Verb       | Description     | 
 | ---------- |-----------------|
-| `HEAD`     | Can be issued against any resource to get just the HTTP header info. |
+| HEAD       | Can be issued against any resource to get just the HTTP header info. |
+| GET        | Used for retrieving resources. |
+| POST       | Used for creating resources. |
+| PUT        | Used for replacing resources or collections. For PUT requests with no body attribute, be sure to set the Content-Length header to zero. |
+| DELETE     | Used for deleting resources. Will return a 204 with an empty body on success. |
+
