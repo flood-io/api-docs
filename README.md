@@ -40,4 +40,12 @@ This feature is still in private beta, if you would like to request access, plea
 
 * [GET /account](endpoints/account/GET-account.md)
 * [GET /floods](endpoints/floods/GET-floods.md)
+* [GET /floods/:flood_id](endpoints/floods/GET-floods-flood_id.md)
+* [GET /floods/:flood_id/report](endpoints/floods/GET-floods-flood_id-report.md)
+* [GET /floods/:flood_id/result](endpoints/floods/GET-floods-flood_id-result.md)
+* [GET /floods/:flood_id/stop](endpoints/floods/GET-floods-flood_id-stop.md)
 * [POST /floods](endpoints/floods/POST-floods.md)
+* [GET /grids](endpoints/grids/GET-grids.md)
+* [GET /grids/:grid_id](endpoints/grids/GET-grids-grid_id.md)
+* [POST /grids](endpoints/grids/POST-grids.md)
+* [DELETE /grids](endpoints/grids/DELETE-grids-grid_id.md)
