@@ -38,4 +38,4 @@ This feature is still in private beta, if you would like to request access, plea
 
 # Endpoints
 
-* [GET /account](endpoints/account/GET-account)
+* [GET /account](endpoints/account/GET-account.md)
