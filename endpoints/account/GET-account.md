@@ -1,8 +1,8 @@
 # Definition
 
-    https://api.flood.io/account
+List account details
 
-List Account Details
+    GET https://api.flood.io/account
 
 # Result Format
 
