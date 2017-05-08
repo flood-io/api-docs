@@ -8,9 +8,9 @@ Creates a new grid. This may be a long-running request.
 
 | Parameter | Required | Type | Description |
 | --------- | -------- | ---- | ----------- |
-| grid[region] | true | string |  target region to start the grid in, any value from ap-southeast-2, us-east-1, us-west-1, us-west-2, eu-west-1, eu-central-1, ap-southeast-1, ap-northeast-1, sa-east-1. |
+| grid[region] | true | string |  target region to start the grid in, any value from ap-southeast-2, us-east-1, us-west-1, us-west-2, eu-west-1, eu-central-1, ap-southeast-1, ap-northeast-1, sa-east-1 |
 | grid[instance_quantity] | true | integer | number of grid nodes to launch |
-| grid[stop_after] | true | integer | stop after n minutes |
+| grid[stop_after] | true | integer | stop after n minutes, greater than 0, less than or equal to 2,880 (48 hours) |
 | grid[infrastructure] | true | string |  On Demand `demand` or Host Your Own `hosted` |
 | grid[aws_platform] | false | string | aws platform to use `ec2_default_vpc`, `ec2_classic` |
 | grid[aws_tags] | false | string | optional tags e.g. `key1=value, key2=value` |
