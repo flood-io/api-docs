@@ -42,6 +42,27 @@ curl -u ${API_TOKEN}: -X POST https://api.flood.io/floods \
   -F "flood[grids][][stop_after]=60"
 ```
 
+## Lauch a flood on multiple new grids
+
+```sh
+curl -u ${FLOOD_API_TOKEN}: -X POST https://api.flood.io/floods \
+ -F "flood[tool]=jmeter" \
+ -F "flood[threads]=10" \
+ -F "flood[privacy]=public" \
+ -F "flood[name]=MyTest" \
+ -F "flood_files[]=@jmeter-with-plugins.jmx" \
+ -F "flood[grids][][infrastructure]=demand" \
+ -F "flood[grids][][instance_quantity]=1" \
+ -F "flood[grids][][region]=ap-southeast-2" \
+ -F "flood[grids][][instance_type]=m4.xlarge" \
+ -F "flood[grids][][stop_after]=60" \
+ -F "flood[grids][][infrastructure]=demand" \
+ -F "flood[grids][][instance_quantity]=1" \
+ -F "flood[grids][][region]=ap-southeast-2" \
+ -F "flood[grids][][instance_type]=m4.xlarge" \
+ -F "flood[grids][][stop_after]=60" | jq -r .
+ ```
+
 ## Launch flood on an existing grid
 
 ```sh
