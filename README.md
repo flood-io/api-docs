@@ -1,37 +1,47 @@
 This document describes the make up of the Flood API.
 
 # Schema
+
 The Flood API follows the [Hypertext Application Language](http://stateless.co/hal_specification.html) serialization format for responses, and accepts a standard ActiveModel style request body format for JSON requests, and form-data based requests for application/multipart.
 
 # Current Version
+
 The current version of the API is v2, which is also accepted as the default version. We encourage you to explicitly specify the correct version:
 
-    Accept: application/vnd.flood.v2+json
+```
+Accept: application/vnd.flood.v2+json
+```
 
 # Making requests
+
 The Flood API server is `https://api.flood.io`, you must use HTTPS for requests or your client will be redirected to the HTTPS version.
 
 # HTTP Verbs
+
 Where possible, Flood API strives to use appropriate HTTP verbs for each action.
 
-| Verb       | Description     |
-| ---------- |-----------------|
-| HEAD       | Can be issued against any resource to get just the HTTP header info. |
-| GET        | Used for retrieving resources. |
-| POST       | Used for creating resources. |
-| PUT        | Used for replacing resources or collections. For PUT requests with no body attribute, be sure to set the Content-Length header to zero. |
-| DELETE     | Used for deleting resources. Will return a 204 with an empty body on success. |
+| Verb | Description |
+| --- | --- |
+| HEAD | Can be issued against any resource to get just the HTTP header info. |
+| GET | Used for retrieving resources. |
+| POST | Used for creating resources. |
+| PUT | Used for replacing resources or collections. For PUT requests with no body attribute, be sure to set the Content-Length header to zero. |
+| DELETE | Used for deleting resources. Will return a 204 with an empty body on success. |
 
 # Authentication
 
 Flood API supports multiple authentication strategies, depending on how you're using the API.
 
 ## Basic Token
+
 The simplest way to authenticate is by using your API token, which can be found on your account page. Example:
 
-    curl "https://api.flood.io/api/floods" -u "<USER_TOKEN_HERE>:"
+```
+curl "https://api.flood.io/api/floods" -u "<USER_TOKEN_HERE>:"
+```
 
 ## OAuth 2
+
 We also support OAuth2, which allows you to generate user tokens, or register an application to develop against and allow your own users to authenticate with their account. This is ideal if you're developing an application for release as a desktop or mobile app.
 
 This feature is still in private beta, if you would like to request access, please email support@flood.io
@@ -40,13 +50,13 @@ This feature is still in private beta, if you would like to request access, plea
 
 * [GET /account](endpoints/account/GET-account.md)
 * [GET /floods](endpoints/floods/GET-floods.md)
-* [GET /floods/:flood_id](endpoints/floods/GET-floods-flood_id.md)
-* [GET /floods/:flood_id/report](endpoints/floods/GET-floods-flood_id-report.md)
-* [GET /floods/:flood_id/result](endpoints/floods/GET-floods-flood_id-result.md)
-* [GET /floods/:flood_id/stop](endpoints/floods/GET-floods-flood_id-stop.md)
+* [GET /floods/:flood\_id](endpoints/floods/GET-floods-flood_id.md)
+* [GET /floods/:flood\_id/report](endpoints/floods/GET-floods-flood_id-report.md)
+* [GET /floods/:flood\_id/result](endpoints/floods/GET-floods-flood_id-result.md)
+* [GET /floods/:flood\_id/stop](endpoints/floods/GET-floods-flood_id-stop.md)
 * [POST /floods](endpoints/floods/POST-floods.md)
 * [GET /grids](endpoints/grids/GET-grids.md)
-* [GET /grids/:grid_id](endpoints/grids/GET-grids-grid_id.md)
+* [GET /grids/:grid\_id](endpoints/grids/GET-grids-grid_id.md)
 * [POST /grids](endpoints/grids/POST-grids.md)
 * [DELETE /grids](endpoints/grids/DELETE-grids-grid_id.md)
 
@@ -100,3 +110,6 @@ echo
 echo "[$(date +%FT%T)+00:00] Storing CSV results at resuts.csv"
 curl --silent --user $FLOOD_API_TOKEN: https://api.flood.io/floods/$flood_uuid/result.csv > result.csv
 ```
+
+
+
