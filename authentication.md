@@ -6,7 +6,7 @@ Flood API supports multiple authentication strategies, depending on how you're u
 
 The simplest way to authenticate is by using your API token, which can be found on your account page. Example:
 
-```
+```bash
 curl "https://api.flood.io/api/floods" -u "<USER_TOKEN_HERE>:"
 ```
 
