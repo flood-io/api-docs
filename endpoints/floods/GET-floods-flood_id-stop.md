@@ -12,7 +12,7 @@ Stops a flood test and returns its status. This may be a long-running request.
 
 # Examples
 
-    curl -u ${API_TOKEN}: -X POST https://api.flood.io/floods/aad1e863cdb884/stop
+    curl -u ${API_TOKEN}: -X GET https://api.flood.io/floods/uPYa4XdM1HAnQFsNsE5TLg/stop
 
 # Result Format
 
