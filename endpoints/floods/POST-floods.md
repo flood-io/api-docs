@@ -10,7 +10,7 @@ Note to windows users when using curl be sure to prepend the flood_files[] value
 
 | Parameter | Required | Type | Description |
 | --------- | -------- | ---- | ----------- |
-| flood[tool] | true | string | type of tool to use, jmeter, gatling, java-selenium-chrome or java-selenium-firefox |
+| flood[tool] | true | string | type of tool to use: jmeter, gatling, java-selenium-chrome or java-selenium-firefox, or flood-chrome |
 | flood_files | true | file | test plan to use, as a multipart upload |
 | flood[grids] | true | array of mixed | array of grid objects to distribute flood to |
 | flood[name] | false | string | name of the flood test |
