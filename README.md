@@ -46,20 +46,6 @@ We also support OAuth2, which allows you to generate user tokens, or register an
 
 This feature is still in private beta, if you would like to request access, please email support@flood.io
 
-# Endpoints
-
-* [GET /account](endpoints/account/GET-account.md)
-* [GET /floods](endpoints/floods/GET-floods.md)
-* [GET /floods/:flood\_id](endpoints/floods/GET-floods-flood_id.md)
-* [GET /floods/:flood\_id/report](endpoints/floods/GET-floods-flood_id-report.md)
-* [GET /floods/:flood\_id/result](endpoints/floods/GET-floods-flood_id-result.md)
-* [GET /floods/:flood\_id/stop](endpoints/floods/GET-floods-flood_id-stop.md)
-* [POST /floods](endpoints/floods/POST-floods.md)
-* [GET /grids](endpoints/grids/GET-grids.md)
-* [GET /grids/:grid\_id](endpoints/grids/GET-grids-grid_id.md)
-* [POST /grids](endpoints/grids/POST-grids.md)
-* [DELETE /grids](endpoints/grids/DELETE-grids-grid_id.md)
-
 # End to End Example
 
 Using your favourite CI build automation tool, you could execute a similar script as follows to launch and run flood tests:
