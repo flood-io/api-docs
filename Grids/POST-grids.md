@@ -21,6 +21,7 @@ Creates a new grid. This may be a long-running request.
 | grid[aws_vpc_subnet_public] | false | string | optional public subnet e.g. `subnet-4991ab21` |
 | grid[aws_vpc_subnet_private] | false | string | optional private subnet e.g. `subnet-4991ab22` |
 | grid[aws_vpc_security_groups] | false | string | optional security groups e.g. `sg-11692834` |
+| grid[instance_type] | true | string | instance type e.g. `m5.xlarge` |
 
 # Examples
 
@@ -32,7 +33,7 @@ curl -u ${API_TOKEN}: -X POST https://api.flood.io/grids \
   -F "grid[infrastructure]=demand" \
   -F "grid[instance_quantity]=2" \
   -F "grid[stop_after]=60" \
-  -F "grid[instance_type]=m4.xlarge"
+  -F "grid[instance_type]=m5.xlarge"
 ```
 
 ## Launch hosted grid
@@ -44,7 +45,7 @@ curl -u abc123: -X POST https://api.flood.io/grids \
   -F "grid[aws_platform]=ec2_default_vpc" \
   -F "grid[instance_quantity]=1" \
   -F "grid[stop_after]=60" \
-  -F "grid[instance_type]=m4.xlarge" \
+  -F "grid[instance_type]=m5.xlarge" \
   -F "grid[credential_id]=1"
 ```
 
@@ -62,7 +63,7 @@ curl -u abc123: -X POST https://api.flood.io/grids \
   "region": "ap-southeast-2",
   "origin": "Australia (Sydney)",
   "instance_quantity": 2,
-  "instance_type": "m4.xlarge",
+  "instance_type": "m5.xlarge",
   "infrastructure": "demand",
   "stop_after": 60,
   "status": "queued",
