@@ -15,6 +15,7 @@ Note to windows users when using curl be sure to prepend the flood_files[] value
 | flood[grids] | true | array of mixed | array of grid objects to distribute flood to |
 | flood[name] | false | string | name of the flood test |
 | flood[notes] | false | string | notes or description of the flood test |
+| flood[project] | false | string | notes or project name of the flood test |
 | flood[tag_list] | false | string | comma separated tags associated with the flood test |
 | flood[privacy_flag] | false | string | public or private [default]|
 | flood[threads] | false | integer | number of threads to pass in to test plan |
