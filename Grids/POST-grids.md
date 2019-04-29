@@ -16,7 +16,7 @@ Creates a new grid. This may be a long-running request.
 | grid[aws_tags] | false | string | optional tags e.g. `key1=value, key2=value` |
 | grid[aws_availability_zone] | false | string | optional availability zone within a region e.g. `us-east-1a` |
 | grid[aws_spot_price] | false | double | optional spot price for instances in decimal cents e.g. 0.48 |
-| grid[credential_id] | false | string | required for `hosted` grids |
+| grid[credential_id] | false | string | required for `hosted` grids; retrieved from GET https://api.flood.io/account |
 | grid[aws_vpc_identifier] | false | string | optional VPC ID e.g. `vpc-4991ab20` |
 | grid[aws_vpc_subnet_public] | false | string | optional public subnet e.g. `subnet-4991ab21` |
 | grid[aws_vpc_subnet_private] | false | string | optional private subnet e.g. `subnet-4991ab22` |
