@@ -2,7 +2,7 @@ This document describes the make up of the Flood API.
 
 # Schema
 
-The Flood API follows the [Hypertext Application Language](http://stateless.co/hal_specification.html) serialization format for responses, and accepts a standard ActiveModel style request body format for JSON requests, and form-data based requests for application/multipart.
+The Flood API follows the [Hypertext Application Language](https://github.com/mikekelly/hal_specification) serialization format for responses, and accepts a standard ActiveModel style request body format for JSON requests, and form-data based requests for application/multipart.
 
 # Current Version
 
