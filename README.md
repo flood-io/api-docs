@@ -61,19 +61,19 @@ command -v jq >/dev/null 2>&1 || \
 # Start a flood
 echo
 echo "[$(date +%FT%T)+00:00] Starting flood"
-flood_uuid=$(curl -u abc123: -X POST https://api.flood.io/floods \
- -F "flood[tool]=jmeter" \
- -F "flood[threads]=10" \
- -F "flood[privacy]=public" \
- -F "flood[name]=MyTest" \
- -F "flood[tag_list]=ci,shakeout" \
- -F "flood[meta]=$meta" \
- -F "flood_files[]=@jmeter-with-plugins.jmx" \
- -F "flood[grids][][infrastructure]=demand" \
- -F "flood[grids][][instance_quantity]=1" \
- -F "flood[grids][][region]=ap-southeast-2" \
- -F "flood[grids][][instance_type]=m4.xlarge" \
- -F "flood[grids][][stop_after]=60" | jq -r ".uuid")
+flood_uuid=$(curl -u flood_live_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx: -X POST https://api.flood.io/floods \
+-F "flood[tool]=jmeter" \
+-F "flood[threads]=5" \
+-F "flood[project]=Default" \
+-F "flood[privacy]=public" \
+-F "flood[name]=CI Shakeout" \
+-F "flood_files[]=@data.csv" \
+-F "flood_files[]=@basic.jmx" \
+-F "flood[grids][][infrastructure]=demand" \
+-F "flood[grids][][instance_quantity]=1" \
+-F "flood[grids][][region]=us-west-2" \
+-F "flood[grids][][instance_type]=m5.xlarge" \
+-F "flood[grids][][stop_after]=15" | jq -r ".uuid")
 
 # Wait for flood to finish
 echo "[$(date +%FT%T)+00:00] Waiting for flood $flood_uuid"
